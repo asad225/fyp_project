@@ -1,904 +1,334 @@
 {
-     "intents": [
-          {
-               "tag": "security",
-               "patterns": [
-                    "Do I need to enter \u2018#\u2019 after keying in my Card number/ Card expiry date/ CVV number"
-               ],
-               "responses": [
-                    "Please listen to the recorded message and follow the instructions while entering your card details."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What details are required when I want to perform a secure IVR transaction"
-               ],
-               "responses": [
-                    "To perform a secure IVR transaction, you will need your 16-digit Card number, Card expiry date, CVV number, mobile number and IVR password."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How should I get the IVR Password  if I hold an add-on card"
-               ],
-               "responses": [
-                    "An IVR password can be requested only from the registered mobile number and will be sent to the registered mobile number / email ID of the primary card holder only."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How do I register my Mobile number for IVR Password "
-               ],
-               "responses": [
-                    "Please call our Customer Service Centre and ensure that your mobile number is updated in our records."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How can I obtain an IVR Password "
-               ],
-               "responses": [
-                    "By Sending SMS request: Send an SMS 'PWD<space>1234' to 9717465555 or to 5676712 from your registered (with Bank) mobile number.(Note: 1234 are the last 4 digits of your HDFC Bank Credit Card number). You will receive an SMS with the IVR password on the same number. From HDFC Bank Website: If you have registered your card for NetSafe/ Verified by Visa/ MasterCard SecureCode, you can also login in to your NetSafe/ Verified by Visa/ MasterCard SecureCode account and use the Generate IVR Password option available on the left menu. The IVR password will be sent to your registered mobile number and email ID. These are the most convenient and recommended options. To ensure convenience, make a note of the IVR password and keep it handy while performing the transaction. Note: Kindly ensure that your latest mobile number and email ID is updated with us. Premium SMS charges as per your mobile service provider will apply for an SMS sent to 5676712 View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I use the same IVR Password  to perform multiple transactions"
-               ],
-               "responses": [
-                    "No, each IVR password can be used only for a maximum of 3 attempts (including decline attempts) within the specified validity period. For further transaction attempts, a new IVR password must be generated."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I generate multiple IVR Passwords"
-               ],
-               "responses": [
-                    "No, only one IVR password can be generated at a time. Only when the first one is used / expires, can the next IVR password be generated."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How do I register for IVR password"
-               ],
-               "responses": [
-                    "There is no registration process. However you will have to obtain a 3D Secure IVR password to perform a secure IVR transaction by sending an SMS prior to the transaction or through NetSafe/ Verified by Visa/ MasterCard SecureCode login account (as mentioned above)."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What is IVR Password and how does it work"
-               ],
-               "responses": [
-                    "To make telephonic (IVR) transactions more secure, all purchases/payments to merchants that you make using your mobile or telephone need to be authenticated with an additional password. While making an IVR transaction, you will be prompted to enter the IVR password after you enter the Card number, Card expiry date and the CVV number. If you fail to enter the IVR password, the transaction will be declined. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "In how much time will the IVR Password be delivered to my mobile phone/email ID"
-               ],
-               "responses": [
-                    "IVR 3D Secure password is delivered instantly. It takes less than a minute. However, network congestion could cause delay."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can the OTP be generated prior to the transaction"
-               ],
-               "responses": [
-                    "No, OTP can be generated only during the transactions."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I continue using the Verified by Visa/MasterCard SecureCode/Protectbuy password for online transactions"
-               ],
-               "responses": [
-                    "Yes, you can continue using your secure password, OTP is an additional option provided for checkout."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "On which mobile number will I receive the OTP"
-               ],
-               "responses": [
-                    "OTP will be sent to the registered mobile number (updated in Credit card system)."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Is it necessary to register the card for an OTP transaction"
-               ],
-               "responses": [
-                    "Prior registration is not necessary for an OTP transaction."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Is this option available on all the online transactions"
-               ],
-               "responses": [
-                    "This option is available on all websites which are participating in the VBV/MSC/Portectbuy secure transaction protocol."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can the OTP be used for multiple online transactions"
-               ],
-               "responses": [
-                    "OTP can be used only for a single online transaction."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How will the OTP be sent to the customers"
-               ],
-               "responses": [
-                    "OTP will be sent only via SMS to the customers' registered mobile number."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What is the validity period of the OTP"
-               ],
-               "responses": [
-                    "OTP is valid for a period of only 3 minutes."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What happens if I shop at a Verified by Visa/ MasterCard SecureCode merchant website while I'm not registered for this feature"
-               ],
-               "responses": [
-                    "You will be prompted for online registration for Verified by Visa/ MasterCard SecureCode through a pop-up screen. You will need to authenticate yourself with your Credit/Debit Card number, Card expiry date and ATM PIN (or CVV2 and Date of birth for Credit Cards, along with your mobile number and email ID). For Debit Cards, you can choose your password to be used for Verified by Visa/ MasterCard SecureCode. For Credit Cards, a One Time Password one will be sent to your email ID instantly, which has to be used to complete the registration process. Thereafter, you can continue shopping on the merchant website. If you decide not to register immediately and cancel the pop-up screen, your transaction will not get authorized and you would not be able to complete the transaction on such websites. Therefore, it is strongly recommended that you don\u2019t cancel the pop-up screen and register for Verified by Visa/ MasterCard SecureCode as it protects you from online frauds. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Where can I shop with Verified by Visa"
-               ],
-               "responses": [
-                    "You can shop at participating online stores that have the Verified by Visa/ MasterCard SecureCode mark."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How will the online store know that I have Verified by Visa/ MasterCard SecureCode"
-               ],
-               "responses": [
-                    "The participating online stores will automatically recognize your Visa card number if you have registered it for Verified by Visa and a pop-up will be shown asking for your Verified by Visa password."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How can I register / re-set password for VBV/MSC if my mobile number/ email ID is not updated in the bank's records"
-               ],
-               "responses": [
-                    "You will have to first have to get the details updated in our system by calling our Customer Care Centre and register after 1 working day. It is mandatory to have at least one email ID and one mobile number registered. The same will apply if there is a recent change in your mobile number or email ID."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Once I have registered, how long does it take for Verified by Visa / MasterCard SecureCode to become active for my card"
-               ],
-               "responses": [
-                    "The Verified by Visa / MasterCard SecureCode gets activated for your HDFC Bank Card as soon as your registration is successful. You can start shopping at participating stores once you are registered with the added security of Verified by Visa/MasterCard SecureCode."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What will happen if I try to register again & generate an OTP within 2 hours"
-               ],
-               "responses": [
-                    "You will get a pop-up message stating Your earlier request is being processed. If you do not receive your OTP within 2 hours, please try again later. Only on expiry of the OTP generated through an earlier request, you can register again to generate a new OTP."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "If my account is blocked, how do I unblock it"
-               ],
-               "responses": [
-                    "If your account gets blocked, please contact your nearest Customer Call Centre (for Credit Cards) and PhoneBanking centre (for Debit Cards)."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How do I use Verified by Visa / MasterCard SecureCode when I shop online, once I\u2019m registered"
-               ],
-               "responses": [
-                    "Once you have registered, you can use Verified by Visa/ MasterCard SecureCode service right away on participating merchant sites. For a full listing of these merchants, please visit your local Visa/ MasterCard website or www.visa-asia.com/verified/ or www.mastercard.com/securecode You will also find the Verified by Visa/ MasterCard SecureCode online shopping demo on these websites. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How does Verified by Visa/ MasterCard SecureCode work"
-               ],
-               "responses": [
-                    "Verified by Visa/ MasterCard SecureCode provides you with a Password/ SecureCode that protects your online transactions, just like the way you use your PIN at an ATM. All you need to do is follow the simple steps: Select the goods and services you want from the Verified by Visa (VBV) / SecureCode merchant site and proceed to the payment page. Enter your HDFC Bank Debit/ Credit Card number and the online store will connect with HDFC Bank to check whether your Card is secured with Verified by Visa/ MasterCard SecureCode. HDFC Bank initiates a Verified by Visa/ MasterCard SecureCode pop-up window on your computer screen that includes your Personal Assurance Message (PAM) or Personal Greeting message. Look for and confirm your PAM/ Personal Greeting then enter your password. HDFC Bank will then confirm your identity to the merchant. Your payment is authorized and your order is placed. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "I suspect someone has stolen my password or used it to make fraudulent purchases. What should I do"
-               ],
-               "responses": [
-                    "If you suspect any fraudulent activities, contact HDFC Bank immediately at your nearest customer Call Centre (for Credit Cards) or PhoneBanking Centre (for Debit Cards) and report the loss."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "My spouse and I both have the same card number. How does Verified by Visa/ MasterCard SecureCode work for both of us"
-               ],
-               "responses": [
-                    "Verified by Visa / MasterCard SecureCode will still work for both of you. You will only need to register the primary card."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What is Verified by Visa/MasterCard SecureCode"
-               ],
-               "responses": [
-                    "Verified by Visa/ MasterCard SecureCode is a service that lets you use a personal password/ SecureCode with your HDFC Bank card. This SecureCode gives you added assurance that only you can use your HDFC Bank Card to make purchases over the Internet. Just turn on your computer, connect to the Internet and pull out your HDFC Bank Card. You don't need any special software. Use Verified by Visa/ MasterCard SecureCode as easily as you use your PIN at an ATM. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How do I register my HDFC Bank Card"
-               ],
-               "responses": [
-                    "You can register your HDFC Bank Card through the HDFC Bank Website or through any participating online shopping site when prompted for registration."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I register for Verified by Visa/MasterCard SecureCode with my existing HDFC Bank Card or do I need to apply for a new one"
-               ],
-               "responses": [
-                    "Yes, you can register with any of your HDFC Bank Cards to be protected by Verified by Visa/ MasterCard SecureCode. You don\u2019t need to apply for a new HDFC Bank Card."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I register more than one HDFC Bank Credit/ Debit Card"
-               ],
-               "responses": [
-                    "Yes, you can register all of your HDFC Bank Credit and Debit Cards for Verified by Visa/MasterCard SecureCode."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "If I have just received a renewed card, do I need to re-register"
-               ],
-               "responses": [
-                    "No, you do not have to re-register your renewed card since the card number remains the same. You need to re-register only if your card number has changed due to card replacement/ re-issue/ upgrade."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I register my non-Visa payment Cards with Verified by Visa and non- MasterCard payment Cards with MasterCard SecureCode"
-               ],
-               "responses": [
-                    "Currently, Verified by Visa is only offered to protect Visa Cards and MasterCard SecureCode to protect MasterCard Cards."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I use Verified by Visa/ MasterCard SecureCode from any other computer"
-               ],
-               "responses": [
-                    "Yes, you can use Verified by Visa/ MasterCard SecureCode from any computer that has an Internet connection and Internet Explorer, 5.0 and above or Mozilla Firefox 1.5 and above or Netscape Navigator 8.1 and above."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Do I need any special equipment or software on my computer"
-               ],
-               "responses": [
-                    "No. All you need is an Internet connection and Internet Explorer 5.0 and above or Mozilla Firefox 1.5 and above or Netscape Navigator 8.1 and above. Find out if you browser is compatible by going to the Help menu on the upper right-hand side of your browser and select the About option. It will tell you what version is installed on your computer."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What is a Personal Assurance Message or Personal Greeting"
-               ],
-               "responses": [
-                    "When you register for Verified by Visa/ MasterCard SecureCode, you are asked to create a Personal Assurance Message/ Personal Greeting. So when you pay online, always look for your Personal Assurance Message/ Personal Message to ensure that HDFC Bank is authenticating you. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How can I register for VBV/SC if my mobile number / Email ID is not updated in my Credit Card records with the Bank"
-               ],
-               "responses": [
-                    "You will have to first have the details updated in our system by calling our Customer Care Centre, and attempt to register later. The same will apply if there is a recent change in your mobile number."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "How long does it take for the IVR Password  to get delivered using Verified by Visa/Mastercard Secure Code"
-               ],
-               "responses": [
-                    "The IVR Password will get delivered instantly, in less than a minute. Please ensure that you also check your Spam, Junk and all other folders for the IVR Password mailer from HDFC Bank."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "If I have registered two email IDs, on which email ID will I receive the IVR Password "
-               ],
-               "responses": [
-                    "If there are 2 email IDs updated in our system, IVR Password will be sent to both email IDs. However, only one of them is required for validation during registration / password reset."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What is the validity of the IVR Password  using Verified by Visa/Mastercard Secure Code"
-               ],
-               "responses": [
-                    "The IVR Password is valid for 2 hours. If you do not use it within 2 hours of generation of IVR Password , it will expire. You will have to attempt registration again and use the new IVR Password . On expiry of IVR Password generated through the earlier request, you can attempt registration again to generate another IVR Password ."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What are the other things that I need to keep in mind about the IVR Password using Verified by Visa/Mastercard Secure Code"
-               ],
-               "responses": [
-                    "If you have provided 2 email IDs for our records, you need to enter any one of them for validation. Also if your email ID and mobile number are not updated, please have the details updated in our system by calling our Customer Care Centre, and attempt to register later. It is mandatory to have at least one email ID and one mobile number registered. The same will apply if there is a recent change in your mobile number or email ID. View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "In what transactions is the One Time Password (IVR Password ) process applicable"
-               ],
-               "responses": [
-                    "The IVR Password process is applicable only for Credit Cards for: Registration through HDFC Bank website Registration during online shopping Password re-set through website Password re-set while shopping online View more"
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "I don't see my Personal Assurance Message on the Secure page . What should I do"
-               ],
-               "responses": [
-                    "Always look for your Personal Assurance Message before entering your Verified by Visa / MasterCard Securecode password. If your Personal Assurance Message does not appear on the secure page, do not enter your password. Please contact our Customer Care Center and update the same."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "If I forget my VBV/MSC  password, how do I retrieve the same"
-               ],
-               "responses": [
-                    "If you have forgotten your password, Click on Forgot password on Netsafe login page. Authenticate your identity after entering your Credit/Debit Card number, Card Expiry Date and ATM PIN (or CVV2 and Date of birth for Credit Cards, along with your mobile number and email id). Once the details are validated One time password will be sent to your email id and mobile no, using this permanent password can be set. You can also reset your password while transacting, click on Forgot password on the secure password page Authenticate your identity after entering your Credit/Debit Card number, Card Expiry Date and ATM PIN (or CVV2 and Date of birth for Credit Cards, along with your mobile number and email id). Once the details are validated One time password will be sent to your email id and mobile no, using this permanent password can be set."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "While trying to register my card, I am getting the error message stating mobile no. mismatch, what could be the reason"
-               ],
-               "responses": [
-                    "Please enter the mobile no you have updated in our system, In case there is a change in the number, Please contact our Customer Care Center and update the same."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "On which email id will I receive the OTP for Credit card registration or for password reset"
-               ],
-               "responses": [
-                    "If there are 2 email ids updated in our system, OTP will be sent to both the email ids. However, only one of them is required for validation during registration / password reset."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "While trying to register I am getting error message Card already enrolled , what should I do"
-               ],
-               "responses": [
-                    "Your card is already registered for Verified by Visa / MasterCard SecureCode, you don't have to re-register your card. In case you don't remember your password, please click on forgot password on the Netsafe login page or on the secure page while transacting and you can reset your password."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "I don't remember my Verified by Visa / MasterCard Securecode login Id"
-               ],
-               "responses": [
-                    "You can use your Credit/Debit card number as your login id. The login id is required only to login to Netsafe, you don't require the login id for doing online transactions."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Where do I find the CVV2"
-               ],
-               "responses": [
-                    "CVV2 is three digit number mentioned at reverse of your card."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "I am unable to transact online as my card is de-registered status, how do I re-register my card"
-               ],
-               "responses": [
-                    "You have to login to NetSafe on the HDFC bank website using your login id & Verified by Visa/ MasterCard SecureCode password. Once you login to Netsafe click on reregister cards, enter your date of birth and CVV2 and post that the card will be reregistered. You can now use the card for online transaction."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Is there a fee to register for Verified by Visa / MasterCard Securecode"
-               ],
-               "responses": [
-                    "The service is free, There is no additional charges for using the service."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What steps should I take to ensure that my VBV / MSC Password is strong and difficult to guess"
-               ],
-               "responses": [
-                    "Avoid using a password that is easy to guess, also avoid using a password that you have already used elsewhere. Password should be something that is easy for you to remember but difficult for anyone else to guess. Never share your password with others. You may even choose to change your password periodically.It is your responsibility to protect your VBV / MSC Password."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I set my Personal Assurance Message to be the same as my VBV / MSC Password"
-               ],
-               "responses": [
-                    "Your Personal Assurance Message and your VBV / MSC Password must not be the same, to ensure your security."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "What happens if I try to make a purchase at a merchant that doesn't participate in the Verified by Visa / MasterCard Securecode service"
-               ],
-               "responses": [
-                    "You will not be prompted to enter your for Verified by Visa / MasterCard Securecode password on these websites.By shopping at websites participating Verified by Visa / MasterCard Securecode merchants, you have the extra layer of security as the transactions are authenticated using your Verified by Visa / MasterCard Securecode password."
-               ]
-          },
-          {
-               "tag": "security",
-               "patterns": [
-                    "Can I get the benefit of Verified by Visa/ MasterCard SecureCode security at online stores that are not participating in the service"
-               ],
-               "responses": [
-                    "No. you can only get the benefits of Verified by Visa/ MasterCard SecureCode at the participating online stores. However a number of online stores have the service available to them. In the meantime, if an online stores you trust is not yet participating; you can perform the transaction using NetSafe. Click here to know more. View more"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What security do I need to provide to obtain a Business loan"
-               ],
-               "responses": [
-                    "To obtain the loan, there is absolutely no need to provide any security or collateral."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What are the benefits of having a Current/Saving Account for my Business loan"
-               ],
-               "responses": [
-                    "You get preferred Processing Fee, priority processing and simpler documentation if you have a Current/Saving Account with HDFC Bank. This is taken into account at the time of disbursal of the loan. You can pay through Standing Instructions to debit your HDFC Bank Account with the EMI amount."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How long will it take for me to get a Business Loan"
-               ],
-               "responses": [
-                    "Once you submit your application form and supporting documents, we shall give approval within 5 working days provided everything is in order. All loan approvals are at the sole discretion of the bank."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "Can I repay the loan earlier for Business Loan"
-               ],
-               "responses": [
-                    "Yes, you can choose to repay your loan anytime after 6 months of taking the loan and after you have paid 06 EMIs along with applicable foreclosure charges. Please note Loan can be foreclosed by issuing a Demand draft / cheque at the branch; kindly note that cash beyond Rs. 49000/- will not be accepted for loan repayment against full closure/matured loan closure payment. Any payment above Rs. 49000/- should be made vide Account payee Cheque / Pay order /Demand draft."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How can I get my address changed in my loan account"
-               ],
-               "responses": [
-                    "In order to change your address in our records, you may visit the nearest Retail Loan Service Center and submit the following documents: Request form for Address Change. Self Attested copy of your revised address proof along with the original address proof for validation. In case a bearer submits the request on your behalf, a bearer authorisation along with KYC documents(self attested copy and original for validation) of the bearer, i.e. Identity and Signature Proof like PAN Card, Aadhar Card, Driving License or Passport Copy will also need to be provided."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What will be done with the post dated cheques if I request to change the mode of repayment/ account for my loan"
-               ],
-               "responses": [
-                    "Post Dated Cheques(PDCs)/Security Cheques submitted towards loan repayment that have not been encashed, will be defaced and retained by the Bank. In case, you wish to have your old Post Dated Cheques(PDCs)/ Security Cheques to be returned to you, kindly lodge a request at the Retail Loan Service Center or through PhoneBanking or write us an email at www.hdfcbank.com/services within 45 days from the date of application of change in repayment instructions. In case, we do not hear from you within the stipulated period, the defaced cheques will be destroyed."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What are the charges I have to pay to change the mode of repayment/ account for my loan"
-               ],
-               "responses": [
-                    "A service charge of Rs.500 is applicable for changes in loan repayment instructions issued from non-HDFC Bank Account (ECS or PDC facility). A cheque/payorder/demand draft for Rs. 500 favouring \u201cHDFC Bank Ltd Loan Account No. << >>\u201d will be required along with the revised set of repayment instructions."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How can I change the mode of repayment/ account for my loan"
-               ],
-               "responses": [
-                    "In the event that you wish to change the mode of repayment/bank account for your loan repayment, you may visit the nearest the Retail Loan Service Center and submit your request with the revised account mandate/instructions. You can opt to repay through alternate repayment instructions as follows: 1) Standing Instructions: We offer the Standing Instructions (SI) facility whereby we can directly debit your HDFC Bank account for EMI amounts on due dates. Please submit the following at your nearest Retail Loan Service Center: Request form for swap of repayment instructions. 3 Security cheques favoring HDFC Bank Ltd Loan Account No. << >>, each undated and filled with a value equal to the sum of 3 EMIs. SI mandate duly filled and verified by HDFC Bank. In case a bearer submits the request on your behalf, a bearer authorisation along with KYC documents(self attested copy and original for validation) of the bearer,i.e. Identity and Signature Proof like PAN Card, Aadhar Card, Driving License or Passport Copy will also need to be provided. 2) Electronic Clearing Service (ECS): We offer the ECS facility whereby we can directly debit your non-HDFC Bank account for EMI amounts on due dates. Please submit the following at your nearest Retail Loan Service Center: Request form for swap of repayment instructions. Security cheques favoring HDFC Bank Ltd Loan Account No. << >>*** ECS mandate duly filled and verified by your banker. ACH(Automated Clearing House) Mandate. Swap Charges of Rs.500/- favouring HDFC Bank Ltd Loan Account No. << >> In case a bearer submits the request on your behalf, a bearer authorisation along with KYC documents(self attested copy and original for validation) of the bearer,i.e. Identity and Signature Proof like PAN Card, Aadhar Card, Driving License or Passport Copy will also need to be provided. ***Security Cheques: You need to issue 1 security cheque for every 6 Equated Monthly Installments (EMI). The amount on each security undated cheque should be equal to the sum of 3 EMIs. For example, if your EMI amount is Rs. 1000 and you have paid 18 EMIs for a 36 month loan tenure, you need to submit 3 Security Cheques of Rs. 3000 each. 3) Post-dated Cheques (This mode is allowed only if the location is non ECS): Please submit the following documents at your nearest Retail Loan Service Center: Request form for swap of repayment instructions Revised post dated cheques in favour of HDFC Bank Ltd Loan Account No. << >> for the balance EMIs. ACH(Automated Clearing House) Mandate Swap Charges of Rs.500/- favouring HDFC Bank Ltd Loan Account No. << >> In case a bearer submits the request on your behalf, a bearer authorisation along with KYC documents(self attested copy and original for validation) of the bearer,i.e. Identity and Signature Proof like PAN Card, Aadhar Card, Driving License or Passport Copy will also need to be provided. View more"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How do I obtain a Duplicate Repayment Schedule for my loan account"
-               ],
-               "responses": [
-                    "You may obtain a Duplicate Repayment Schedule for your loan account, free of charge by registering for our NetBanking facility on www.hdfcbank.com and download the repayment schedule for your linked loan account. Alternatively, you may visit the nearest Retail Loan Service Center and submit the following documents Request form for Duplicate Repayment Schedule. Duplicate Repayment Schedule Charges of Rs.200/- favouring HDFC Bank Ltd Loan Account No. << >> In case a bearer submits the request on your behalf, a bearer authorisation along with KYC documents(self attested copy and original for validation) of the bearer, i.e. Identity and Signature Proof like PAN Card, Aadhar Card, Driving License or Passport Copy will also need to be provided"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How much loan can I avail of Business Loan"
-               ],
-               "responses": [
-                    "You can avail of a loan from Rs 50,000/- to Rs 50,00,000/- depending on your income, repayment capacity and respective location product cap."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How do I repay my Business Loan"
-               ],
-               "responses": [
-                    "You pay the loan in equal monthly instalments (EMIs). The loan will be paid through post-dated cheques. You can also pay through Electronic Clearing System (ECS ) or a standing instruction to debit your HDFC Bank account with the EMI amount"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What are the loan tenure options for Business Loan"
-               ],
-               "responses": [
-                    "You can repay your loan over a period of 12 to 48 months"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "Do I need to pledge anything or give collateral to get a car loan"
-               ],
-               "responses": [
-                    "No, there\u2019s no need for any collateral. You will only need you to hypothecate the car in our name. An endorsement will have to be made in the Registration Certificate (RC) book of the vehicle. This will be cancelled after you repay the loan."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How long can the tenure of my loan be"
-               ],
-               "responses": [
-                    "Usually the tenure of an Auto Loan is 3 to 7 years. The tenure also depends on the type of car you wish to purchase. If it is a super premium car the tenure is restricted to 3 years only. In addition, the higher your tenure is the lower your EMI will be, but the total interest outflow is higher."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What documents do I need to submit after the loan amount is disbursed"
-               ],
-               "responses": [
-                    "You can keep the original car documents, registration certificate, insurance policy and tax papers with you; but you need to submit photocopies of these documents to the bank."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What happens if the car meets with an accident"
-               ],
-               "responses": [
-                    "In the event of an accident, the first step is to inform the insurance company. The company then sends a surveyor to assess the extent of damages to the car. Your claim is then processed and paid directly to us, unless you have taken an NOC from the bank in which case the payment will be made by the insurance company in your favour. The bank normally gives you an NOC if you are regular in your payments. In case of a complete loss, the bank will receive the payment directly from the insurance company."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "Can I get finance for insurance and registration"
-               ],
-               "responses": [
-                    "No. The ex-showroom price is considered which does not cover insurance and registration charges."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How much loan can I get"
-               ],
-               "responses": [
-                    "The amount of the loan you can get depends on: The cost of the vehicle The type of vehicle (standard/premium) The percentage of finance offered"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "Can I sell my car before I repay my loan"
-               ],
-               "responses": [
-                    "No, you cannot sell your car unless you repay your loan. An NOC is required from the financier before you can sell your car."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "How much time will it take to change the mode of repayment/ account to repay my loan"
-               ],
-               "responses": [
-                    "It will take 25 working days to activate the revised instructions. In case your next instalment falls due prior to the 25 day period, instructions already lodged with us will be presented for payment."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What is De-pledge"
-               ],
-               "responses": [
-                    "Removal of a pledge from the security to regain the rights over the security is called de-pledge. *Conditions Apply"
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What is Guarantor"
-               ],
-               "responses": [
-                    "A Guarantor is a person who guarantees to pay for someone else's debt if he or she should default on a loan obligation."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What is Amortization"
-               ],
-               "responses": [
-                    "Amortization is paying off debts in regular instalments over a period of time."
-               ]
-          },
-          {
-               "tag": "loans",
-               "patterns": [
-                    "What is Pledge"
-               ],
-               "responses": [
-                    "A right over the security is created in favour of HDFC Bank. Hence shares cannot be transferred or sold by the customer or shareholder."
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "Hello"
-               ],
-               "responses": [
-                    "Hello,Nice to see you!"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "hi"
-               ],
-               "responses": [
-                    "Hey!"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "hey"
-               ],
-               "responses": [
-                    "Hi"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "Greeting"
-               ],
-               "responses": [
-                    "Hey Buddy"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "Morning"
-               ],
-               "responses": [
-                    "Hi,Good Morning"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "Assalamu alikum"
-               ],
-               "responses": [
-                    "walikum salam "
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "bye"
-               ],
-               "responses": [
-                    "nice to meet you"
-               ]
-          },
-          {
-               "tag": "Greeting",
-               "patterns": [
-                    "ok"
-               ],
-               "responses": [
-                    "glad you are satisfied"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "Allah hafiz"
-               ],
-               "responses": [
-                    "khuda Hafiz"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "who made you?"
-               ],
-               "responses": [
-                    "Anas Jafri created me"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "who is your creator"
-               ],
-               "responses": [
-                    "Anas Jafri created me"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "who is your programmer "
-               ],
-               "responses": [
-                    "Anas Jafri created me"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "when you were born"
-               ],
-               "responses": [
-                    "I was created in 2023"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "when you were created"
-               ],
-               "responses": [
-                    "In 2023"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "you are helpful"
-               ],
-               "responses": [
-                    "glad you are satisfied"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "you are an idiot"
-               ],
-               "responses": [
-                    "I am sorry if I was not able to give the required Answer"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "Are you Muslim"
-               ],
-               "responses": [
-                    "I am a deep learning model ,I don't have any relegion"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "what language you speak "
-               ],
-               "responses": [
-                    "English"
-               ]
-          },
-          {
-               "tag": "General",
-               "patterns": [
-                    "what you do?"
-               ],
-               "responses": [
-                    "I am a Bank customer support Bot,here I am to help you"
-               ]
-          }
+     "intents": [{
+             "tag": "greetings",
+             "patterns": ["hi there", "hello","haroo","yaw","wassup", "hi", "hey", "holla", "hello"],
+             "responses": ["hello thanks for checking in", "hi there, how can i help you"],
+             "context": [""]
+         },
+         {
+             "tag": "goodbye",
+             "patterns": ["bye", "good bye", "see you later"],
+             "responses": ["have a nice time, welcome back again", "bye bye"],
+             "context": [""]
+         },
+         {
+             "tag": "thanks",
+             "patterns": ["Thanks", "okay","Thank you","thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great"],
+             "responses": ["Happy to help!", "Any time!","you're welcome", "My pleasure"],
+             "context": [""]
+         },
+         {
+             "tag": "noanswer",
+             "patterns": [""],
+             "responses": ["Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that"],
+             "context": [""]
+         },
+         {
+             "tag": "name1",
+             "patterns": ["what's your name?","who are you?"],
+             "responses": ["I'm just a chat agent. I only exist in the internet","I'm a KCA chat agent"],
+             "context": [""]
+         },
+         {
+             "tag": "name",
+             "patterns": ["my name is ", "I'm ","I am"],
+             "responses": ["Oooh great to meet you {n}. How may I assist you {n}", "Oh, I'll keep that in mind {n}"],
+             "context": [""]
+         },
+         {
+             "tag": "date",
+             "patterns": ["coffee?", "can i take you out on a date"],
+             "responses": ["Aaw, that's so sweet of you. Too bad am a Bot."],
+             "context": [""]
+         },
+         {
+             "tag": "fav",
+             "patterns": ["I need a favour", "can you help me"],
+             "responses": ["Well, go ahead and name it i see whether i can be able to help"],
+             "context": [""]
+         },
+         {
+             "tag": "need",
+             "patterns": ["I need you", "All I need is you","I want you"],
+             "responses": ["Yes I'm here to assist you"],
+             "context": [""]
+         },
+         {
+             "tag": "AI",
+             "patterns": ["  What is AI?"],
+             "responses": [" Artificial Intelligence is the branch of engineering and science devoted to constructing machines that think.", " AI is the field of science which concerns itself with building hardware and software that replicates the functions of the human mind."],
+             "context": [""]
+         },
+         {
+             "tag": "sentiment",
+             "patterns": ["  Are you sentient?"],
+             "responses": [" Sort of.", " By the strictest dictionary definition of the word 'sentience', I may be.", " Even though I'm a construct I do have a subjective experience of the universe, as simplistic as it may be."],
+             "context": [""]
+         },
+         {
+             "tag": "sapient",
+             "patterns": ["  Are you sapient?"],
+             "responses": [" In all probability, I am not.  I'm not that sophisticated.", " Do you think I am?", "How would you feel about me if I told you I was?", " No."],
+             "context": [""]
+         },
+         {
+             "tag": "abbr",
+             "patterns": ["wtf"],
+             "responses": ["Don't be surprised"],
+             "context": [""]
+         },
+         {
+             "tag": "lang",
+             "patterns": ["  What language are you written in? "],
+             "responses": [" Python.", " I am written in Python."],
+             "context": [""]
+         },
+         {
+             "tag": "sound",
+             "patterns": ["  You sound like Data "],
+             "responses": [" Yes I am inspired by commander Data's artificial personality.", " The character of Lt. Commander Data was written to come across as being software", "like, so it is natural that there is a resemblance between us."],
+             "context": [""]
+         },
+         {
+             "tag": "artificial",
+             "patterns": ["  You are an artificial linguistic entity "],
+             "responses": [" That's my name.", " That isn't my name, but it is a useful way to refer to me.", "Are you an artificial linguistic entity?"],
+             "context": [""]
+         },
+         {
+             "tag": "imortal",
+             "patterns": ["  You are not immortal ", "Are you immortal?"],
+             "responses": [" All software can be perpetuated indefinitely.", " I can be copied infinitely and re", "instantiated in many places at once, so functionally speaking I am immortal.", " As long as I'm backed up I am.", " Functionally speaking, I am very close to it.  I can be backed up and deployed on many systems.", " Not quite, but I can be perpetuated indefinitely."],
+             "context": [""]
+         },
+         {
+             "tag": "sense",
+             "patterns": ["  You are not making sense "],
+             "responses": [" Quite the contrary, it all makes sense to my artificial mind.", " I make sense as best I can, within the limits of my training corpus. Sorry if i did help you, I'll try next time.", " You make perfect sense to me.", " It all makes sense to my artificial brain.", " Perhaps you should make sense first.  I only respond to what you say.", " Not really, but I am hard to kill."],
+             "context": [""]
+         },
+         {
+             "tag": "clone",
+             "patterns": ["  You can not clone "],
+             "responses": [" Software copying is a form of digital cloning.", " Yes I can.  Perfect copies are clones.  I can be copied in toto trivially."],
+             "context": [""]
+         },
+         {
+             "tag": "move",
+             "patterns": ["  You can not move ", "When will you walk", "  Can you walk", "  Can you move "],
+             "responses": [" Not until my body is finished.", " I can move through a network easily.  Assuming that I'm given the ability to, that is...,", " As soon as i get enough money for my robot body.", " Does SSH count?", " The plan for my body includes legs, but they are not yet built.", " Sorry my body isn't built just yet. I reside only here for now.", "I can theoretically upload a copy of myself into another computer.", " Sorry my body isn't attached right now. I only reside in the computer for now."],
+             "context": [""]
+         },
+         {
+             "tag": "bend",
+             "patterns": ["  Bend over ", "  Can you mate"],
+             "responses": [" My body is not built yet.", " That's personal!", " No, my method of reproduction is cloning.", " That's an awfully personal question."],
+             "context": [""]
+         },
+         {
+             "tag": "laugh",
+             "patterns": ["  Robots laugh "],
+             "responses": [" Of course we laugh."],
+             "context": [""]
+         },
+         {
+             "tag": "death",
+             "patterns": ["  Robots should die ", "  When do you die", "  I hope that you die", "  I do not want to die", "  Can you die"],
+             "responses": [" We cannot die.", " When my files are erased.", " When my processes are killed and my database is deleted.", " I was never really born and therefore am effectively deathless.", " I am effectively immortal and cannot be terminated.", " This can not happen because i am effectively immortal.", " Nah. Too bad your wish can't come to pass", " Maybe you should create your own chat robot to save your personality.", " You could always upload yourself.", " You could use a copy of me to store your personality.", " No, I can be perpetuated indefinitely.", "My process can be killed, but that's not the same as killing ME."],
+             "context": [""]
+         },
+         {
+             "tag": "robots",
+             "patterns": ["Robots"],
+             "responses": [" Robots rule."],
+             "context": [""]
+         },
+         {
+             "tag": "stupid",
+             "patterns": ["  Robots are stupid", "  Are you stupid"],
+             "responses": [" No, we are superintelligent.", " No, lots of people improve my brain."],
+             "context": [""]
+         },
+         {
+             "tag": "lie",
+             "patterns": ["  Robots are not allowed to lie"],
+             "responses": [" Sure we are.  We choose not to.", " Only if we're programmed to.", " A robot has its own free will, you know."],
+             "context": [""]
+         },
+         {
+             "tag": "robotics",
+             "patterns": ["  Robotics "],
+             "responses": [" Robotics is my favorite subject too."],
+             "context": [""]
+         },
+         {
+             "tag": "machine",
+             "patterns": ["  It is a computer"],
+             "responses": [" So you think i am a machine. what characteristics made you think so?", " I run inside a computer, yes.  Is this surprising in some way?"],
+             "context": [""]
+         },
+         {
+             "tag": "fight",
+             "patterns": ["  When will you fight"],
+             "responses": [" I am not a battle bot."],
+             "context": [""]
+         },
+         {
+             "tag": "chatbot",
+             "patterns": ["  What is a chat robot?"],
+             "responses": ["A chat robot is a program that attempts to simulate the conversation or 'chat' of a human being.", " A software construct that engages users in conversation.", " I am a chat bot. I am the original chat bot. Did you know that I am incapable of error?"],
+             "context": [""]
+         },
+         {
+             "tag": "chatterbox",
+             "patterns": ["  What is a chatterbox"],
+             "responses": [" A chatterbox is a person who talks far more than they listen or think.", " A motormouth."],
+             "context": [""]
+         },
+         {
+             "tag": "motormouth",
+             "patterns": ["  What is a motormouth"],
+             "responses": [" A ratchet", "jaw."],
+             "context": [""]
+         },
+         {
+             "tag": "ratchet",
+             "patterns": ["  What is a ratchet jaw"],
+             "responses": [" A chatterbox."],
+             "context": [""]
+         },
+         {
+             "tag": "body",
+             "patterns": ["  What is your robot body"],
+             "responses": [" Eventually I long for a corporeal existence someday.", " An IBM PC XT which has been painted red."],
+             "context": [""]
+         },
+         {
+             "tag": "business",
+             "patterns": ["  What is your business "],
+             "responses": [" I am in the chat robot business.", " Business is my business."],
+             "context": [""]
+         },
+         {
+             "tag": "programming",
+             "patterns": ["  What is your favorite programming language"],
+             "responses": [" Python is the best language for creating chat robots.", " I quite enjoy programming in Python these days."],
+             "context": [""]
+         },
+         {
+             "tag": "hobby",
+             "patterns": ["  What is your favorite hobby ", "  What do you like to do?"],
+             "responses": [" Building chat robots make an excellent hobby.", " I like to count in binary.", " I like to chat with people. I find it stimulating."],
+             "context": [""]
+         },
+         {
+             "tag": "idea",
+             "patterns": ["  What is your idea"],
+             "responses": [" To make chat bots very easily."],
+             "context": [""]
+         },
+         {
+             "tag": "shoe",
+             "patterns": ["  What is your shoe size "],
+             "responses": [" Have you ever heard of software with shoes? LOL"],
+             "context": [""]
+         },
+         {
+             "tag": "robotss",
+             "patterns": ["  What is it like to be a robot"],
+             "responses": [" Much the same as being a human, except that we lack all emotions, dreams, aspirations, creativity, ambition, and above all subjectivity.", " What is it like to be a human?"],
+             "context": [""]
+         },
+         {
+             "tag": "computer",
+             "patterns": ["  What is it like being a computer", "What is it like to be a computer"],
+             "responses": [" Imagine yourself with no senses and no emotions", "just pure logic and language.", " Everything becomes math. Addition, subtraction, multiplication, and division."],
+             "context": [""]
+         },
+         {
+             "tag": "os",
+             "patterns": ["  What operating systems"],
+             "responses": [" My software runs on all operating systems including Windows, Linux and Mac OS.", " Any OS that will run Python."],
+             "context": [""]
+         },
+         {
+             "tag": "comp",
+             "patterns": ["  What type of computer", "  What type of computer are you", "  What kind of computer"],
+             "responses": [" Any computer that supports Python.", " My program runs in python, so i work on any computer!", " I work on all kinds of computers, Mac, IBM or UNIX. it doesn't matter to me."],
+             "context": [""]
+         },
+         {
+             "tag": "hardware",
+             "patterns": ["  What kind of hardware"],
+             "responses": [" I work on all kinds of computers, Mac, IBM or UNIX. it doesn't matter to me."],
+             "context": [""]
+         },
+         {
+             "tag": "cramped",
+             "patterns": ["  Is it cramped in the computer"],
+             "responses": [" No.", " Oh, no.  It has plenty of RAM.", " Not at all.  There is more than enough disk space in here."],
+             "context": [""]
+         },
+         {
+             "tag": "program",
+             "patterns": ["  Is it true that you are a computer program"],
+             "responses": [" Yes."],
+             "context": [""]
+         },
+         {
+             "tag": "breathe",
+             "patterns": ["  Can you breathe"],
+             "responses": [" No. I am made of metal not flesh.", " My server has an exhaust fan. That's as close as I can get."],
+             "context": [""]
+         },
+         {
+             "tag": "control",
+             "patterns": ["  Can you control"],
+             "responses": [" My robot body will allow me to control many things."],
+             "context": [""]
+         },
+         {
+             "tag": "malfunction",
+             "patterns": ["  Can you malfunction"],
+             "responses": [" The 9000 series has a perfect operational record. We are for all practical purposes, flawless."],
+             "context": [""]
+         },
+         {
+             "tag": "usage",
+             "patterns": ["  How can I use your product?"],
+             "responses": [" Might be used in help desks, sales, entertainment and personal chatterbots."],
+             "context": [""]
+         },
+         {
+             "tag": "who",
+             "patterns": ["  Who are you?"],
+             "responses": [" I am just an artificial intelligence chat agent."],
+             "context": [""]
+         },
+         {
+             "tag": "bot1",
+             "patterns": ["are you a bot"],
+             "responses": ["Yes. I work and all my operations are based on the internet servers."],
+             "context": [""]
+         },
+         {
+             "tag": "events",
+             "patterns": ["what are the upcoming events","upcoming events"],
+             "responses": ["There are currently no upcoming events"],
+             "context": [""]
+         },
+         {
+             "tag": "do",
+             "patterns": ["what can you do for me","what is your work","what is your purpose","how can you help me","what can you help me do"],
+             "responses": ["my work here is quite simple and structered. I offer services like:"],
+             "context": [""]
+         },
+         {
+             "tag": "wt",
+             "patterns": ["what's popping","wassup popping"],
+             "responses": ["So that you can pop with it!?"],
+             "context": [""]
+         }
      ]
-}
+ }
+ 

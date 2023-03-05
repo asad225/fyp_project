@@ -75,10 +75,10 @@ def prepare_training_data(classes,documents,words):
 def create_model(train_x,train_y,epochs=200,batch_size=5):
     
     model = Sequential()
-    model.add(Dense(120, input_shape=(len(train_x[0]),), activation="relu"))
-    model.add(Dropout(0.3))
+    model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
+    model.add(Dropout(0.5))
     model.add(Dense(64, activation="relu"))
-    model.add(Dropout(0.3))
+    model.add(Dropout(0.5))
     model.add(Dense(len(train_y[0]), activation="softmax"))
     model.summary()
 
@@ -101,8 +101,8 @@ def create_model(train_x,train_y,epochs=200,batch_size=5):
 
 if __name__ == '__main__':
 
-    os.system("python preprocess.py")
-    time.sleep(3)
+    # os.system("python preprocess.py")
+    # time.sleep(3)
 
     nltk.download('omw-1.4')
     nltk.download("punkt")
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
     train_x,train_y = prepare_training_data(classes,documents,words)
 
-    create_model(train_x,train_y,200,5)
+    create_model(train_x,train_y,500,5)
 
 
 
