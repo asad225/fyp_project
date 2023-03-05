@@ -15,9 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 class ConnectionManager:
-
     def __init__(self) -> None:
         self.active_connections: List[WebSocket] = []
 
@@ -56,7 +54,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: int):
             data = await websocket.receive_text()
             #data which we got from frontend
             print(data)
-            respone = takeInputs(str(data))
+            respone = chatbot_response(str(data))
             respone = str(respone)
             print(respone)
             # await manager.send_personal_message(f"You wrote: {data}", websocket)
