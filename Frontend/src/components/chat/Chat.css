@@ -1,0 +1,71 @@
+.chat-container{
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 50vh; */
+    gap: 2rem;
+    font-family: var(--font-family);
+}
+
+.file-submit-form input{
+    display: none;
+}
+.file-submit-form label{
+    /* width: 100%; */
+    /* min-height: 50px; */
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: #FF4820;
+    border: 2px solid #FF4820;
+    padding:2px 6px ;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.3s ;
+}
+
+label:hover{
+    opacity: 0.5;
+}
+.file-submit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.file-submit-form p {
+    color: white;
+    max-width: 30%;
+}
+
+.file-submit-form button{
+    background: var(--gradient-bar);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px 12px;
+}
+
+.file-submit-form button:hover{
+    opacity: 0.4;
+}
+
+.upload-status{
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+    line-height: normal;
+}
+
