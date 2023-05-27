@@ -31,6 +31,7 @@ const ChatUI = () => {
 
   useEffect(() => {
     const url = "ws://localhost:8000/ws/" + clientId;
+    // const url = "ws://localhost:8000/ws/";
     const ws = new WebSocket(url);
     ws.onopen = (event) => {
       console.log("connected");
