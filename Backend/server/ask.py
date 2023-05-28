@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import time
 from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 # # Load the model
@@ -15,22 +15,38 @@ tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
 tokenizer.fit_on_texts(df['Questions'])
 
 
+def get_bot_response(question):
+    sequence = tokenizer.texts_to_sequences([question])
+    padded_sequence = pad_sequences(
+    sequence, maxlen=100, padding='post', truncating='post')
+    prediction = model.predict(padded_sequence)
+    answer = label_encoder.inverse_transform([np.argmax(prediction)])
+    return answer[0]
+
+     
+
+    
 if __name__ == '__main__':
-    correct = 0
-    for question,orig_answer in zip(df['Questions'],df['Responses']):
-        sequence = tokenizer.texts_to_sequences([question])
-        padded_sequence = pad_sequences(
-            sequence, maxlen=100, padding='post', truncating='post')
-        prediction = model.predict(padded_sequence)
+    while True:
+        input_data = input('You: ')
+        response = get_bot_response(input_data)
+        print('bot: ' + response)
 
-        # Get the predicted answer
-        answer = label_encoder.inverse_transform([np.argmax(prediction)])
-        # print("Question:",question,'\n\n')
-        # print("Response:",answer[0],'\n\n')
-        # print("Expected Response:",orig_answer,'\n\n')
-        if answer[0] == orig_answer:
-            correct = correct + 1
-        # time.sleep(5)
+    # correct = 0
+    # for question,orig_answer in zip(df['Questions'],df['Responses']):
+    #     sequence = tokenizer.texts_to_sequences([question])
+    #     padded_sequence = pad_sequences(
+    #         sequence, maxlen=100, padding='post', truncating='post')
+    #     prediction = model.predict(padded_sequence)
 
-    total = df.shape[0]
-    print("Accuracy",round((correct/total)*100,2),'%')
+    #     # Get the predicted answer
+    #     answer = label_encoder.inverse_transform([np.argmax(prediction)])
+    #     # print("Question:",question,'\n\n')
+    #     # print("Response:",answer[0],'\n\n')
+    #     # print("Expected Response:",orig_answer,'\n\n')
+    #     if answer[0] == orig_answer:
+    #         correct = correct + 1
+    #     # time.sleep(5)
+
+    # total = df.shape[0]
+    # print("Accuracy",round((correct/total)*100,2),'%')

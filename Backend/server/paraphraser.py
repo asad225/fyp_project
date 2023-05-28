@@ -1,5 +1,6 @@
 import nlpaug.augmenter.word as naw
-from proof_read import proofread
+# from proof_read import proofread
+
 import nltk
 
 def augment_data(sentence, num_aug):

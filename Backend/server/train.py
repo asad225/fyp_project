@@ -3,8 +3,8 @@ import pandas as pd
 df = pd.read_excel('dataset.xlsx')
 
 # Preprocess the data
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
