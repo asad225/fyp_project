@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "keras": "^1.0.1",
-    "numpy": "^0.0.1"
-  }
-}
