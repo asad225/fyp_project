@@ -3,8 +3,9 @@ import pandas as pd
 df = pd.read_excel('dataset.xlsx')
 
 # Preprocess the data
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+
 
 tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
 tokenizer.fit_on_texts(df['Questions'])
@@ -19,9 +20,9 @@ from sklearn.model_selection import train_test_split
 X_train, X_val, y_train, y_val = train_test_split(padded_sequences, labels, test_size=0.2, random_state=42)
 
 # Define the model with an embedding layer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM,Bidirectional,Dense, Dropout, Embedding
-from tensorflow.keras.optimizers import SGD
+from keras.models import Sequential
+from keras.layers import LSTM,Bidirectional,Dense, Dropout, Embedding
+from keras.optimizers import SGD
 
 model = Sequential([
     Embedding(input_dim=10000, output_dim=64, input_length=100),
