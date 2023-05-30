@@ -30,6 +30,7 @@ html {
   height: 100vh;
   background-image: var(--body-bg);
   font-family: Helvetica, sans-serif;
+  border-radius: 12px;
 }
 
 .msger {
@@ -57,12 +58,15 @@ html {
   font-family: var(--font-family);
   color: black;
   font-weight: bolder;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .msger-chat {
   flex: 1;
   overflow-y: auto;
   padding: 10px;
+  /* border-radius: 5px; */
 }
 .msger-chat::-webkit-scrollbar {
   width: 6px;
@@ -135,6 +139,8 @@ html {
   padding: 10px;
   border-top: var(--border);
   background: #eee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .msger-inputarea * {
   padding: 10px;

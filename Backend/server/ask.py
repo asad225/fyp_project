@@ -27,26 +27,26 @@ def get_bot_response(question):
 
     
 if __name__ == '__main__':
-    while True:
-        input_data = input('You: ')
-        response = get_bot_response(input_data)
-        print('bot: ' + response)
+    # while True:
+    #     input_data = input('You: ')
+    #     response = get_bot_response(input_data)
+    #     print('bot: ' + response)
 
-    # correct = 0
-    # for question,orig_answer in zip(df['Questions'],df['Responses']):
-    #     sequence = tokenizer.texts_to_sequences([question])
-    #     padded_sequence = pad_sequences(
-    #         sequence, maxlen=100, padding='post', truncating='post')
-    #     prediction = model.predict(padded_sequence)
+    correct = 0
+    for question,orig_answer in zip(df['Questions'],df['Responses']):
+        sequence = tokenizer.texts_to_sequences([question])
+        padded_sequence = pad_sequences(
+            sequence, maxlen=100, padding='post', truncating='post')
+        prediction = model.predict(padded_sequence)
 
-    #     # Get the predicted answer
-    #     answer = label_encoder.inverse_transform([np.argmax(prediction)])
-    #     # print("Question:",question,'\n\n')
-    #     # print("Response:",answer[0],'\n\n')
-    #     # print("Expected Response:",orig_answer,'\n\n')
-    #     if answer[0] == orig_answer:
-    #         correct = correct + 1
-    #     # time.sleep(5)
+        # Get the predicted answer
+        answer = label_encoder.inverse_transform([np.argmax(prediction)])
+        # print("Question:",question,'\n\n')
+        # print("Response:",answer[0],'\n\n')
+        # print("Expected Response:",orig_answer,'\n\n')
+        if answer[0] == orig_answer:
+            correct = correct + 1
+        # time.sleep(5)
 
-    # total = df.shape[0]
-    # print("Accuracy",round((correct/total)*100,2),'%')
+    total = df.shape[0]
+    print("Accuracy",round((correct/total)*100,2),'%')
