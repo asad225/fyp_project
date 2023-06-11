@@ -11,6 +11,8 @@ from tensorflow.keras.layers import LSTM, Bidirectional, Dense, Dropout, Embeddi
 from tensorflow.keras.optimizers import SGD
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
+
+df = pd.read_excel('BankFAQs.xlsx')
 # Load the T5 model and tokenizer
 model_name = 't5-base'
 tokenizer = T5Tokenizer.from_pretrained(model_name)
@@ -83,3 +85,4 @@ loss, accuracy = model.evaluate(X_val, y_val)
 print('Validation loss:', loss)
 print('Validation accuracy:', accuracy)
 
+model.save('lstm_bankfaq.h5')
