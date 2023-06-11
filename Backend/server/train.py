@@ -1,6 +1,6 @@
 # Load the input data
 import pandas as pd
-df = pd.read_excel('dataset.xlsx')
+df = pd.read_excel('BankFAQs.xlsx')
 
 # Preprocess the data
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -44,4 +44,4 @@ model.fit(X_train, y_train, batch_size=32, epochs=200, validation_data=(X_val, y
 loss, accuracy = model.evaluate(X_val, y_val)
 print('Validation loss:', loss)
 print('Validation accuracy:', accuracy)
-model.save('model.h5')
+model.save('bankfaq.h5')

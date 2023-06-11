@@ -6,10 +6,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 # # Load the model
-model = load_model('model.h5')
+model = load_model('bankfaq.h5')
 label_encoder = LabelEncoder()
 
-df = pd.read_excel('dataset.xlsx')
+df = pd.read_excel('BankFAQs.xlsx')
 label_encoder.fit(df['Responses'])
 tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
 tokenizer.fit_on_texts(df['Questions'])
