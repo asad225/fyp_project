@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 # # Load the model
-model = load_model('bankfaq.h5')
+model = load_model('lstm_bankfaq.h5')
 label_encoder = LabelEncoder()
 
 df = pd.read_excel('BankFAQs.xlsx')

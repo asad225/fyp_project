@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from nltk.corpus import wordnet as wn
 import random
 
+
 # Function to perform synonym replacement
 def replace_synonyms(sentence):
     words = sentence.split()
@@ -48,13 +49,23 @@ labels = pd.get_dummies(augmented_labels).values
 X_train, X_val, y_train, y_val = train_test_split(padded_sequences, labels, test_size=0.2, random_state=42)
 
 # Define and compile the model
+# model = Sequential([
+#     Embedding(input_dim=10000, output_dim=64, input_length=100),
+#     Bidirectional(LSTM(256, return_sequences=True)),
+#     LSTM(128),
+#     Dense(1024, activation='relu'),
+#     Dropout(0.5),
+#     Dense(512, activation='relu'),
+#     Dropout(0.5),
+#     Dense(labels.shape[1], activation='softmax')
+# ])
+
+
 model = Sequential([
     Embedding(input_dim=10000, output_dim=64, input_length=100),
-    Bidirectional(LSTM(256, return_sequences=True)),
-    LSTM(128),
-    Dense(1024, activation='relu'),
-    Dropout(0.5),
-    Dense(512, activation='relu'),
+    Bidirectional(LSTM(256)),
+    Dense(600, activation='gelu'),
+    Dense(600, activation='gelu'),
     Dropout(0.5),
     Dense(labels.shape[1], activation='softmax')
 ])
