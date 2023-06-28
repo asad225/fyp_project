@@ -5,6 +5,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Bidirectional, Dense, Dropout, Embedding
 from sklearn.model_selection import train_test_split
 from nltk.corpus import wordnet as wn
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras import regularizers
 import random
 
 
@@ -61,18 +63,31 @@ X_train, X_val, y_train, y_val = train_test_split(padded_sequences, labels, test
 # ])
 
 
+# model = Sequential([
+#     Embedding(input_dim=10000, output_dim=64, input_length=100),
+#     Bidirectional(LSTM(128)),
+#     Dense(600, activation='gelu'),
+#     Dense(600, activation='gelu'),
+#     Dropout(0.5),
+#     Dense(labels.shape[1], activation='softmax')
+# ])
+
 model = Sequential([
-    Embedding(input_dim=10000, output_dim=64, input_length=100),
-    Bidirectional(LSTM(256)),
-    Dense(600, activation='gelu'),
-    Dense(600, activation='gelu'),
+    Embedding(input_dim=10000, output_dim=128, input_length=100),
+    Bidirectional(LSTM(256, return_sequences=True)),
+    Bidirectional(LSTM(128)),
+    Dense(512, activation='gelu'),
+    Dropout(0.5),
+    Dense(256, activation='gelu'),
     Dropout(0.5),
     Dense(labels.shape[1], activation='softmax')
 ])
 
+
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Train the model
+# early_stopping = EarlyStopping(monitor='val_loss', patience=5)
 model.fit(X_train, y_train, batch_size=32, epochs=200, validation_data=(X_val, y_val))
 
 # Evaluate the model
@@ -80,4 +95,4 @@ loss, accuracy = model.evaluate(X_val, y_val)
 print('Validation loss:', loss)
 print('Validation accuracy:', accuracy)
 
-model.save('lstm_bankfaq.h5')
+model.save('lstm_BankFAQs.h5')
