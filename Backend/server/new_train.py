@@ -1,12 +1,12 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
-from keras.models import Sequential, load_model
-from keras.layers import Embedding, LSTM, Bidirectional, Dense, Dropout
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Bidirectional, Dense, Dropout, Embedding
 import numpy as np
 # Read the data
-df = pd.read_excel('dataset.xlsx')
+df = pd.read_excel('internet_dataset.xlsx')
 
 # Preprocess the data
 tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
@@ -47,4 +47,4 @@ model.fit(X_train, y_train, batch_size=50,
           epochs=150)
 
 # Save the model
-model.save('model.h5')
+model.save('internet_dataset_new_train.h5')

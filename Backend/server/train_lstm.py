@@ -1,8 +1,10 @@
 import pandas as pd
+from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Bidirectional, Dense, Dropout, Embedding
+<<<<<<< Updated upstream
 from sklearn.model_selection import train_test_split
 from nltk.corpus import wordnet as wn
 from tensorflow.keras.callbacks import EarlyStopping
@@ -23,33 +25,37 @@ def replace_synonyms(sentence):
         else:
             augmented_sentence.append(word)
     return ' '.join(augmented_sentence)
+=======
+from tensorflow.keras.optimizers import SGD
+import nlpaug.augmenter.word as naw
 
-df = pd.read_excel('BankFAQs.xlsx')
+# Load the input data
+df = pd.read_excel('internet_dataset.xlsx')
+>>>>>>> Stashed changes
 
-# Apply data augmentation to create additional training examples
-augmented_questions = []
-augmented_labels = []
+# Augment the data with paraphrases
+aug = naw.SynonymAug(aug_src='wordnet')
+df_augmented = pd.DataFrame(columns=['Questions', 'Responses'])
+for index, row in df.iterrows():
+    question = row['Questions']
+    paraphrases = [aug.augment(question) for _ in range(2)]  # Generate 2 paraphrases
+    for paraphrase in paraphrases:
+        df_augmented = pd.concat([df_augmented, pd.DataFrame({'Questions': [paraphrase], 'Responses': [row['Responses']]})], ignore_index=True)
+df = pd.concat([df, df_augmented])
 
-for question, label in zip(df['Questions'], df['Responses']):
-    augmented_questions.append(question)
-    augmented_labels.append(label)
-    
-    paraphrase = replace_synonyms(question)
-    augmented_questions.append(paraphrase)
-    augmented_labels.append(label)
-
-# Tokenize and pad sequences
-tokenizer = Tokenizer(num_words=10000)
-tokenizer.fit_on_texts(augmented_questions)
-sequences = tokenizer.texts_to_sequences(augmented_questions)
+# Preprocess the data
+tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
+tokenizer.fit_on_texts(df['Questions'])
+sequences = tokenizer.texts_to_sequences(df['Questions'])
 padded_sequences = pad_sequences(sequences, maxlen=100, padding='post', truncating='post')
 
 # Create one-hot encoded labels
-labels = pd.get_dummies(augmented_labels).values
+labels = pd.get_dummies(df['Responses']).values
 
 # Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(padded_sequences, labels, test_size=0.2, random_state=42)
 
+<<<<<<< Updated upstream
 # Define and compile the model
 # model = Sequential([
 #     Embedding(input_dim=10000, output_dim=64, input_length=100),
@@ -79,11 +85,23 @@ model = Sequential([
     Dense(512, activation='gelu'),
     Dropout(0.5),
     Dense(256, activation='gelu'),
+=======
+# Define the model with an embedding layer
+model = Sequential([
+    Embedding(input_dim=10000, output_dim=64, input_length=100),
+    Bidirectional(LSTM(128)),
+    Dense(600, activation='relu'),
+    Dense(600, activation='relu'),
+>>>>>>> Stashed changes
     Dropout(0.5),
     Dense(labels.shape[1], activation='softmax')
 ])
 
+<<<<<<< Updated upstream
 
+=======
+# Compile the model
+>>>>>>> Stashed changes
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Train the model
@@ -95,4 +113,9 @@ loss, accuracy = model.evaluate(X_val, y_val)
 print('Validation loss:', loss)
 print('Validation accuracy:', accuracy)
 
+<<<<<<< Updated upstream
 model.save('lstm_BankFAQs.h5')
+=======
+# Save the model
+model.save('para_internet_dataset.h5')
+>>>>>>> Stashed changes
