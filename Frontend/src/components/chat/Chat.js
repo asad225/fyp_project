@@ -13,7 +13,27 @@ export default function Chat() {
 
 
     const formSubmitHandler = (e) => {
-
+        const formData = new FormData();
+        formData.append('csv_file', file);
+        fetch('/api/upload_csv', {
+            method: 'POST',
+            body: formData,
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then((data) => {
+              // Handle successful response
+              console.log('CSV file uploaded successfully:', data);
+            })
+            .catch((error) => {
+              // Handle error
+              console.error('Error uploading CSV file:', error);
+            });
+        
     }
 
   return (
