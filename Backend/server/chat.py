@@ -10,10 +10,10 @@ nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 
 # chat initialization
-model = load_model("mental_health_ann.h5")
-intents = json.loads(open("mental_health_intents.json").read())
-words = pickle.load(open("mental_health_words.pkl", "rb"))
-classes = pickle.load(open("mental_health_classes.pkl", "rb"))
+model = load_model("behavioural_dataset.h5")
+intents = json.loads(open("intents.json").read())
+words = pickle.load(open("words.pkl", "rb"))
+classes = pickle.load(open("classes.pkl", "rb"))
 
 def chatbot_response(msg):
     if msg.startswith('my name is'):
