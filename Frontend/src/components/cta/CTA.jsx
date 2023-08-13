@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const CTA = () => {
   const history = useHistory()
   const redirectToChat = () => {
-    history.push('./livechat')
+    history.push('./chat')
   }
   return (
     <div className="gpt3__cta">

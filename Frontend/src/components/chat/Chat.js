@@ -10,29 +10,31 @@ export default function Chat() {
     const fileHandler = (e) => {
         setFile(e.target.files[0])
     }
+    const [messsage , setMessage] = useState('Your Model is training Please Wait')
+    const [link , showLink] = useState(false)
+    const [isTraining , setIsTraining] = useState(false)
 
 
-    const formSubmitHandler = (e) => {
+    const formSubmitHandler = async (e) => {
+        e.preventDefault()
+        setIsTraining(true)
         const formData = new FormData();
-        formData.append('csv_file', file);
-        fetch('/api/upload_csv', {
-            method: 'POST',
+        formData.append('file', file);
+        try {
+          const response = await fetch("http://127.0.0.1:8000/api/upload_csv", {
+            method: "POST",
             body: formData,
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return response.json();
-            })
-            .then((data) => {
-              // Handle successful response
-              console.log('CSV file uploaded successfully:', data);
-            })
-            .catch((error) => {
-              // Handle error
-              console.error('Error uploading CSV file:', error);
-            });
+          });
+    
+          const data = await response.json();
+          console.log(data['message']);
+
+          setMessage(data['message'])
+          showLink(true)
+        } catch (error) {
+          console.error("Error uploading file:", error);
+        }
+
         
     }
 
@@ -41,13 +43,13 @@ export default function Chat() {
             <h1 className='gradient__text'>Upload your dataset file here</h1>
             <form action="" className='file-submit-form' onSubmit={formSubmitHandler}>
                 <input type="file"  id='file' onChange={fileHandler}/>
-                <label htmlFor="file">Click to Upload</label>
+               { <label htmlFor="file">Click to Upload</label>}
                 {file && <p className='upload-status'>File Uploaded !</p>}
-                <h1 className='gradient__text'>Click on button below for training</h1>
-                <button type='submit'>Train Dataset</button>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque repudiandae sequi, in ea architecto explicabo distinctio. Corporis neque eveniet nostrum, ducimus placeat sunt reiciendis, ipsa tempore ut porro officia quo!</p>
+                {!link && <h1 className='gradient__text'>Click on button below for training</h1>}
+                {!link && <button type='submit'>Train Dataset</button>}
             </form>
-            <h1 className='gradient__text'>Congratulations your training has completed.For live chat with bot <Link to='livechat'>Click here</Link></h1>
+            {isTraining && <h1 className='gradient__text'>{messsage}</h1>}
+            { link && <h1 className='gradient__text'><Link to='livechat'>Click here</Link></h1>}
         </div>
   )
 }

@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 const Header = () => {
   const history = useHistory()
   const redirectToChat = () => {
-    history.push('/livechat')
+    history.push('/chat')
   }
   return (
     <div className="gpt3__header section__padding" id="home">
