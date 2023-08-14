@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 # from ask import *
 from chat import *
+from lstm_model.ask import*
 
 app = FastAPI()
 
@@ -55,7 +56,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: int):
             data = await websocket.receive_text()
             #data which we got from frontend
             print(data)
-            respone = chatbot_response(str(data))
+            # respone = chatbot_response(str(data))
+            respone = get_bot_response(str(data))
             
             # respone = get_bot_response(str(data))
             respone = str(respone)

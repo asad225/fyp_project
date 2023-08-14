@@ -6,17 +6,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
 # # Load the model
-<<<<<<< Updated upstream
-model = load_model('lstm_dataset.h5')
-label_encoder = LabelEncoder()
-
-df = pd.read_excel('dataset.xlsx')
-=======
-model = load_model('para_internet_dataset.h5')
+model = load_model('internet_dataset_train.h5')
 label_encoder = LabelEncoder()
 
 df = pd.read_excel('internet_dataset.xlsx')
->>>>>>> Stashed changes
 label_encoder.fit(df['Responses'])
 tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
 tokenizer.fit_on_texts(df['Questions'])
