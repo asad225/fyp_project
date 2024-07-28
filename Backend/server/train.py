@@ -32,7 +32,7 @@ def tokenize_words_and_prepare_docs_classes(intents):
             if intent["tag"] not in classes:
                 classes.append(intent["tag"])
 
-    return words,classes,documents
+        return words,classes,documents
 
 def lemmatization(words):
     words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
@@ -72,7 +72,7 @@ def prepare_training_data(classes,documents,words):
 
 # Actual training
 # Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons equal to number of intents to predict output intent with softmax
-def create_model(train_x,train_y,epochs=200,batch_size=5):
+def create_model(train_x,train_y,epochs=50,batch_size=5):
     
     model = Sequential()
     model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
@@ -100,9 +100,8 @@ def create_model(train_x,train_y,epochs=200,batch_size=5):
     print("model created")
 
 if __name__ == '__main__':
-
-    # os.system("python preprocess.py")
-    # time.sleep(3)
+    #os.system("python preprocess.py")
+    #time.sleep(3)
 
     nltk.download('omw-1.4')
     nltk.download("punkt")
@@ -126,7 +125,7 @@ if __name__ == '__main__':
 
     train_x,train_y = prepare_training_data(classes,documents,words)
 
-    create_model(train_x,train_y,500,5)
+    create_model(train_x,train_y,20,5)
 
 
 

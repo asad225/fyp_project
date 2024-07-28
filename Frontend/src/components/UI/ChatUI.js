@@ -4,7 +4,7 @@ import "./styles.css";
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "BOT";
+const BOT_NAME = "Ted"
 const PERSON_NAME = "YOU";
 
 function formatDate(date) {
